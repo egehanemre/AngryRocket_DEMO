@@ -10,7 +10,6 @@ public class Collision_Handler : MonoBehaviour
 
     [SerializeField] ParticleSystem crashParticles;
     [SerializeField] ParticleSystem successParticles;
-    [SerializeField] ParticleSystem thrusterParticles;
 
     AudioSource audioSource;
 

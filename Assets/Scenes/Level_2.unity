@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &20811906 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2944793239062145740, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
+  m_PrefabInstance: {fileID: 1692031872665369331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,9 +314,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1287431310 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1090800073334088662, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
+--- !u!198 &981064785 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8986993890907995426, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
   m_PrefabInstance: {fileID: 1692031872665369331}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329245440 stripped
@@ -451,73 +456,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2052636440
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1287431310}
-    m_Modifications:
-    - target: {fileID: 1113205305641416, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_Name
-      value: Rocket Jet Particles
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.837
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.000010525879
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
---- !u!4 &2052636441 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4940884351362868, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-  m_PrefabInstance: {fileID: 2052636440}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &2052636443 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198100719057022332, guid: 8a62cded90506e343824e207b6f491ad, type: 3}
-  m_PrefabInstance: {fileID: 2052636440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1692031872665369331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,6 +464,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198475392848260418, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
+      propertyPath: m_Name
+      value: RocketLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 1090800073334088662, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45
@@ -570,16 +512,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 4592180570519523144, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
+      propertyPath: m_Name
+      value: RocketRight
+      objectReference: {fileID: 0}
     - target: {fileID: 8102861365147394594, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
-      propertyPath: thrusterParticles
+      propertyPath: leftParticles
       value: 
-      objectReference: {fileID: 2052636443}
+      objectReference: {fileID: 981064785}
+    - target: {fileID: 8102861365147394594, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
+      propertyPath: rightParticles
+      value: 
+      objectReference: {fileID: 20811906}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1090800073334088662, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052636441}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91ae822acf26fa7468a244d4bb2e56a6, type: 3}
 --- !u!1001 &4395262324882767366
