@@ -13,6 +13,7 @@ public class Explode : MonoBehaviour
     {
         if (!hasExploded)
         {
+            if (collision.gameObject.tag == "StartPod") { return; }
             Explosion();
             hasExploded = true;
         }
