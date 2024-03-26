@@ -23,8 +23,7 @@ public class Collision_Handler : MonoBehaviour
 
         switch (other.gameObject.tag)
         {
-            case "Pod":
-                Debug.Log("Friendly");
+            case "StartPod":             
                 break;
             case "EndPod":
                 StartSuccessSequence();

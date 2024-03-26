@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pod
   - Obstacle
   - EndPod
+  - StartPod
   layers:
   - Default
   - TransparentFX
