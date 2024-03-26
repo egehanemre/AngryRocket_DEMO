@@ -7,7 +7,7 @@ public class Explode : MonoBehaviour
     [SerializeField] ParticleSystem boomParticles;
 
     bool hasExploded;
-    public float blastRadius = 5.0f;
+    public float blastRadius = 25.0f;
     public float blastForce = 700f;
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,7 +27,7 @@ public class Explode : MonoBehaviour
             if(rb != null)
             {
                 //Starting to initialize sphere from the tip of the rocket by adding offset to location.
-                Vector3 sphereLocation = transform.position + new Vector3(0,1.5f,0);
+                Vector3 sphereLocation = transform.position;
                 rb.AddExplosionForce(blastForce, sphereLocation, blastRadius);
             }
         }
