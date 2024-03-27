@@ -12,6 +12,7 @@ public class EnemyReact : MonoBehaviour
     {
         if (health <= 0)
         {
+            Score.scoreCount += 100;
             Destroy(self);
         }
     }
