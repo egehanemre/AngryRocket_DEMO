@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Movement : MonoBehaviour
 {
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotationSpeed = 25f;
+    public float maxFuel = 100;
+    public static float currentFuel;
+    public float fuelConsumptionRate = 5f;
+    public bool isRocketActive = true;
 
     [SerializeField] AudioClip mainAudioEngine;
 
@@ -21,6 +26,9 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         m_audio = GetComponent<AudioSource>();
+
+        //Always Start With Full Fuel
+        currentFuel = maxFuel;
     }
     void Update()
     {
@@ -44,7 +52,7 @@ public class Movement : MonoBehaviour
     //Manages audio sources to be played in the scene
     void AudioManager()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isRocketActive)
         {
             PlayAudio();
         }
@@ -115,11 +123,26 @@ public class Movement : MonoBehaviour
 
     private void RocketBoost()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isRocketActive)
         {
+            ConsumeFuel();
             rb.freezeRotation = true;
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
             rb.freezeRotation = false;
+        }
+    }
+    void ConsumeFuel()
+    {
+        float fuelConsumed = fuelConsumptionRate * Time.deltaTime;
+        currentFuel -= fuelConsumed;
+        if (currentFuel > 0)
+        {
+            isRocketActive = true;
+        }
+        if (currentFuel < 0)
+        {
+            currentFuel = 0;
+            isRocketActive = false;
         }
     }
 }
