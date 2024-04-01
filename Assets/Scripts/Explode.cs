@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
+    public GameObject panel;
     [SerializeField] ParticleSystem boomParticles;
 
-    bool hasExploded;
+    public bool hasExploded;
+
     public float blastRadius = 25.0f;
     public float blastForce = 700f;
+
+    public Vector3 spawnPosition = new Vector3(-20.21f, 21.04f, 0);
     private void OnCollisionEnter(Collision collision)
     {
         if (!hasExploded)
@@ -16,7 +20,13 @@ public class Explode : MonoBehaviour
             if (collision.gameObject.tag == "StartPod") { return; }
             Explosion();
             hasExploded = true;
+            Invoke("ActivatePanel", 3f);
         }
+    }
+
+    public void ActivatePanel()
+    {
+        panel.SetActive(true);
     }
 
     void Explosion()

@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public Text scoreText;
+    public Text scoreText ;
     public static int scoreCount;
     public static int starRating;
-    private int[] scoreRequirement = { 300, 400, 500};
+    [SerializeField] int[] scoreRequirement = { 300, 400, 500};
     void Update()
     {
         scoreText.text = "Score: " + scoreCount;

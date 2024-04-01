@@ -14,27 +14,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6276
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6276
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.6276
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.050835
+      value: 32.3
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 269.67944
+      value: 6.034128
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1115.2023
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,6 +66,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 95706204029656638, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 95706204029656638, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
+      propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -133,7 +137,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!114 &7218889746371685374
 MonoBehaviour:
@@ -147,5 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7baa39f747b22e54d8b3a9992bc1724d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 35
   self: {fileID: 7402145199678216449}

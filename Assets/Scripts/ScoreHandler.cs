@@ -18,10 +18,13 @@ public class ScoreHandler : MonoBehaviour
         }
         if (Score.starRating == 2)
         {
+            stars[0].SetActive(true);
             stars[1].SetActive(true);
         }
         if (Score.starRating == 3)
         {
+            stars[0].SetActive(true);
+            stars[1].SetActive(true);
             stars[2].SetActive(true);
         }
     }
