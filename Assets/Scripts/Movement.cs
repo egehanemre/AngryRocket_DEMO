@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
 public class Movement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Movement : MonoBehaviour
     public static float currentFuel;
     public float fuelConsumptionRate = 5f;
     public bool isRocketActive = true;
+    public bool isRight, isLeft, isBoost;
 
     [SerializeField] AudioClip mainAudioEngine;
 
@@ -52,7 +54,7 @@ public class Movement : MonoBehaviour
     //Manages audio sources to be played in the scene
     void AudioManager()
     {
-        if (Input.GetKey(KeyCode.Space) && isRocketActive)
+        if (isBoost && isRocketActive)
         {
             PlayAudio();
         }
@@ -64,11 +66,11 @@ public class Movement : MonoBehaviour
 
     void StartThrust()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (isRight)
         {
             RotateLeft();
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (isLeft)
         {
             RotateRight();
         }
@@ -123,7 +125,7 @@ public class Movement : MonoBehaviour
 
     private void RocketBoost()
     {
-        if (Input.GetKey(KeyCode.Space) && isRocketActive)
+        if (isBoost && isRocketActive)
         {
             ConsumeFuel();
             rb.freezeRotation = true;
@@ -144,5 +146,34 @@ public class Movement : MonoBehaviour
             currentFuel = 0;
             isRocketActive = false;
         }
+    }
+
+    public void leftMobile()
+    {
+        isLeft = true;
+    }
+
+    public void noLeft() 
+    {
+        isLeft = false;
+    }
+
+    public void rightMobile()
+    {
+        isRight = true;
+    }
+
+    public void noRight() 
+    {
+        isRight = false;
+    }
+
+    public void isBoostMobile()
+    {
+        isBoost = true;
+    }
+    public void noBoost()
+    {
+        isBoost = false;
     }
 }

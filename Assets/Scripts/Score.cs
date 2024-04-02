@@ -8,10 +8,12 @@ public class Score : MonoBehaviour
     public Text scoreText ;
     public static int scoreCount;
     public static int starRating;
-    [SerializeField] int[] scoreRequirement = { 300, 400, 500};
+    [SerializeField] int[] scoreRequirement;
     void Update()
     {
         scoreText.text = "Score: " + scoreCount;
+
+        starRating = 0;
 
         if(scoreCount >= scoreRequirement[0] && scoreCount < scoreRequirement[1])
         {
