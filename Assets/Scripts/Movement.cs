@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
     //Manages audio sources to be played in the scene
     void AudioManager()
     {
-        if (isBoost && isRocketActive)
+        if (Input.GetKey(KeyCode.Space) && isRocketActive)
         {
             PlayAudio();
         }
@@ -66,11 +66,11 @@ public class Movement : MonoBehaviour
 
     void StartThrust()
     {
-        if (isRight)
+        if (Input.GetKey(KeyCode.A))
         {
             RotateLeft();
         }
-        else if (isLeft)
+        else if (Input.GetKey(KeyCode.D))
         {
             RotateRight();
         }
@@ -125,7 +125,7 @@ public class Movement : MonoBehaviour
 
     private void RocketBoost()
     {
-        if (isBoost && isRocketActive)
+        if (Input.GetKey(KeyCode.Space) && isRocketActive)
         {
             ConsumeFuel();
             rb.freezeRotation = true;
@@ -148,6 +148,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+    /* mobile settings
     public void leftMobile()
     {
         isLeft = true;
@@ -176,4 +177,5 @@ public class Movement : MonoBehaviour
     {
         isBoost = false;
     }
+    */
 }
